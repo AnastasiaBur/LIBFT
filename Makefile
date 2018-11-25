@@ -18,11 +18,11 @@ FLAGS = -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): 
-	gcc $(FLAGS) -c $(SRC) -I./headers
+	gcc $(FLAGS) -c $(SRC) -I.
 	ar rc $(NAME) *.o
 	ranlib $(NAME)
 clean:
 	rm -f *.o
 fclean: clean
 	rm -f $(NAME)
-re: fclean all
+re: fclean $(NAME)
