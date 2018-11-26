@@ -6,12 +6,12 @@
 #    By: jsanford <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 13:44:40 by jsanford          #+#    #+#              #
-#    Updated: 2018/11/23 14:21:04 by jsanford         ###   ########.fr        #
+#    Updated: 2018/11/26 14:39:56 by jsanford         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = src/*.c
+SRC = *.c
 FILES_O = *.o
 FLAGS = -Wall -Werror -Wextra
 
