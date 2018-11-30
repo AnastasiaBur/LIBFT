@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <headers.h>
 #include <stdio.h>
+
+char	*ft_strtrim(char *str);
 
 int		main(void)
 {

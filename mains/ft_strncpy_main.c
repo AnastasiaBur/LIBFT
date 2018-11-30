@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdio.h>
-#include <headers.h>
+
+char 	*ft_strncpy(char *d, char *s, size_t n);
 
 int		main(void)
 {

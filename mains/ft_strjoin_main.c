@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <headers.h>
 #include <stdio.h>
 
+char	*ft_strjoin(char *s, char *s2);
 int		main(void)
 {
 	char *s1 = "Hello, ";
