@@ -6,7 +6,7 @@
 /*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 14:39:27 by jsanford          #+#    #+#             */
-/*   Updated: 2018/11/26 20:35:35 by jsanford         ###   ########.fr       */
+/*   Updated: 2018/11/30 17:51:23 by jsanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	*ft_memalloc(size_t size);
-void	*ft_memccpy(void *restrict s1, const void *restrict s2, int c, size_t n);
+void	*ft_memccpy(void *restrict s1, const void *restrict s2, \
+		int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *restrict s1, const void *restrict s2, size_t n);
@@ -53,6 +54,7 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlen(const char *s);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);

@@ -1,4 +1,16 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/30 17:13:46 by jsanford          #+#    #+#             */
+/*   Updated: 2018/11/30 20:28:18 by jsanford         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 static int		getlen(char const *str, char c)
 {
@@ -45,7 +57,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (!(new = (char **)malloc(sizeof(*new) *(words(s, c) + 1))))
+	if (!(new = (char **)malloc(sizeof(*new) * (words(s, c) + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -61,6 +73,6 @@ char			**ft_strsplit(char const *s, char c)
 		new[i][k] = '\0';
 		i++;
 	}
-	new[i] = '\0';
+	new[i] = 0;
 	return (new);
 }

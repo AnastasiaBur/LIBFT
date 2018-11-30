@@ -6,7 +6,7 @@
 #    By: jsanford <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 13:44:40 by jsanford          #+#    #+#              #
-#    Updated: 2018/11/26 14:39:56 by jsanford         ###   ########.fr        #
+#    Updated: 2018/11/30 17:49:31 by jsanford         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ ft_strequ.c \
 ft_striter.c \
 ft_striteri.c \
 ft_strjoin.c \
+ft_strlcat.c \
 ft_strlen.c \
 ft_strmap.c \
 ft_strmapi.c \

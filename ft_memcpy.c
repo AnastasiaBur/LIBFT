@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/30 17:05:33 by jsanford          #+#    #+#             */
+/*   Updated: 2018/11/30 17:09:27 by jsanford         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *restrict s1, const void *restrict s2, size_t n)
@@ -9,8 +21,7 @@ void	*ft_memcpy(void *restrict s1, const void *restrict s2, size_t n)
 	i = 0;
 	d = s1;
 	s = s2;
-
-	if(n)
+	if (n)
 	{
 		while (i < n)
 		{
