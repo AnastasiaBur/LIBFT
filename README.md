@@ -1,2 +1,2 @@
-# LIBFT
+## LIBFT
 Just my libft project, still working on it... 
