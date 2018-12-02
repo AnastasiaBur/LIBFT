@@ -6,7 +6,7 @@
 #    By: jsanford <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/23 13:44:40 by jsanford          #+#    #+#              #
-#    Updated: 2018/11/30 17:49:31 by jsanford         ###   ########.fr        #
+#    Updated: 2018/12/02 17:48:21 by jsanford         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,9 +63,14 @@ ft_strstr.c \
 ft_strtrim.c \
 ft_tolower.c \
 ft_toupper.c \
+ft_lstadd.c \
+ft_lstdel.c \
+ft_lstdelone.c \
+ft_lstiter.c \
+ft_lstmap.c \
+ft_lstnew.c \
 additional/ft_isspace.c
 
-FILES_O = *.o
 FLAGS = -Wall -Werror -Wextra
 
 all: $(NAME)

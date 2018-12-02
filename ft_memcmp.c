@@ -6,7 +6,7 @@
 /*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 17:05:24 by jsanford          #+#    #+#             */
-/*   Updated: 2018/11/30 17:05:28 by jsanford         ###   ########.fr       */
+/*   Updated: 2018/12/02 15:17:11 by jsanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	fir = s1;
 	sec = s2;
-	while (fir[i] != '\0' && sec[i] != '\0' && fir[i] == sec[i])
+	while (i < n && fir[i] == sec[i])
 		i++;
 	if (i == n)
 		return (0);

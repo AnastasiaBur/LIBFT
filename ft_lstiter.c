@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/23 13:38:04 by jsanford          #+#    #+#             */
-/*   Updated: 2018/12/02 15:38:58 by jsanford         ###   ########.fr       */
+/*   Created: 2016/09/29 00:16:06 by jrameau           #+#    #+#             */
+/*   Updated: 2018/12/02 14:58:09 by jsanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	int i;
-
-	if (!(s))
+	if (!lst)
 		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		s[i] = '\0';
-		i++;
-	}
+	if (lst->next)
+		ft_lstiter(lst->next, f);
+	f(lst);
 }

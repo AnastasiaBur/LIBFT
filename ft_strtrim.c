@@ -6,7 +6,7 @@
 /*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 15:34:29 by jsanford          #+#    #+#             */
-/*   Updated: 2018/11/26 14:47:17 by jsanford         ###   ########.fr       */
+/*   Updated: 2018/12/02 16:39:22 by jsanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,14 @@ char		*ft_strtrim(char const *s)
 	int		n;
 
 	n = 0;
+	if (!s)
+		return (NULL);
 	i = ft_skip(s, 0, 1);
 	max = ft_skip(s, ft_strlen(s) - 1, -1);
-	new = (char *)malloc(ft_strlen(s) + 1);
+	if (i > max)
+		return (ft_strnew(0));
+	if (!(new = (char *)malloc(2 + max - i)))
+		return (NULL);
 	while (i <= max)
 	{
 		new[n] = s[i];

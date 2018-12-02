@@ -6,7 +6,7 @@
 /*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 17:12:51 by jsanford          #+#    #+#             */
-/*   Updated: 2018/11/30 20:07:57 by jsanford         ###   ########.fr       */
+/*   Updated: 2018/12/02 15:44:58 by jsanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char const *s, int fd)
 {
 	int i;
 
+	if (!s || !fd)
+		return ;
 	i = 0;
 	while (s[i])
 	{

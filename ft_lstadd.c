@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsanford <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/23 13:38:04 by jsanford          #+#    #+#             */
-/*   Updated: 2018/12/02 15:38:58 by jsanford         ###   ########.fr       */
+/*   Created: 2016/09/29 00:01:01 by jrameau           #+#    #+#             */
+/*   Updated: 2018/12/02 14:57:49 by jsanford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	int i;
-
-	if (!(s))
-		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		s[i] = '\0';
-		i++;
-	}
+	new->next = *alst;
+	*alst = new;
 }
