@@ -69,7 +69,7 @@ ft_lstdelone.c \
 ft_lstiter.c \
 ft_lstmap.c \
 ft_lstnew.c \
-additional/ft_isspace.c
+ft_isspace.c
 
 FLAGS = -Wall -Werror -Wextra
 

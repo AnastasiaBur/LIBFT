@@ -65,7 +65,10 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		k = 0;
 		if (!(new[i] = ft_strnew(getlen(&s[j], c) + 1)))
-			new[i] = NULL;
+		{
+			ft_strdel(new);
+			return (NULL);
+		}
 		while (s[j] == c)
 			j++;
 		while (s[j] != c && s[j])

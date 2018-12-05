@@ -12,28 +12,41 @@
 
 #include "libft.h"
 
+static int	ft_max(const char *str, long long res, int sign)
+{
+	long long	max;
+
+	max = 922337203685477580;
+	if ((res > max) || (res == max && *str > '7'))
+	{
+		if (sign == 1)
+			return (-1);
+		if (sign == -1)
+			return (0);
+	}
+	return (1);
+}
+
 int		ft_atoi(const char *str)
 {
-	int i;
-	int res;
-	int sign;
+	long long	res;
+	int		sign;
 
 	res = 0;
-	i = 0;
 	sign = 1;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		sign = -1;
-		i++;
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(*str))
 	{
-		res = res * 10 + str[i] - '0';
-		i++;
+		if (ft_max(str, res, sign) != 1)
+			return (ft_max(str, res, sign));
+		res = res * 10 + *str++ - '0';
 	}
 	return (res * sign);
 }
