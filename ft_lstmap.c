@@ -17,16 +17,16 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list		*new;
 	t_list		*list;
 
-	if (!lst)
+	if (!lst || !f)
 		return (NULL);
 	list = f(lst);
 	new = list;
-	while (lst->next)
+	while (lst)
 	{
 		lst = lst->next;
 		if (!(list->next = f(lst)))
 		{
-			free(list->next);
+			free(lst->next);
 			return (NULL);
 		}
 		list = list->next;
